@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 270px;
+
+        }
+        h1{
+            font-size: 50px;
+            color: aqua;
+        }
+        input{
+            padding: 5px;
+            border-radius: 7px;
+            border-color: aqua;
+            outline: none;
+            
+        }
+        button{
+            background-color: aqua;
+            padding: 9px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 15px;
+            width: 90px;
+        }
+        button:hover{
+            border-color: aqua;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        p{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Guess the number</h1>
+    <input id="guessnumber" placeholder="Enter the number"><br><br><br>
+    <button onclick="check()">Check</button>
+    <p id="result">You are right/wrong</p>
+    <p id="score">Score:10</p>
+    <script>
+         var num=document.getElementById("guessnumber")
+         var result=document.getElementById("result")
+         var randomnumber=Math.floor(Math.random()*10)+1
+         var score=document.getElementById("score")
+         var totalscore=10
+         function check(){
+            var enternumber=guessnumber.value
+            if(enternumber==guessnumber)
+            {
+                console.log("right")
+                result.textContent="right"
+                alert("YOU WON TH GAME......!")
+            }
+            else{
+                  totalscore=totalscore-1
+                  score.textContent="score:"+totalscore
+                result.textContent="wrong"
+            }
+         }
+    </script>
+</body>
+</html>
